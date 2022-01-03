@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background changer</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 20px 100px;
+
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .btn {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid gray 2px;
+            cursor: pointer;
+
+        }
+
+        #white {
+            background-color: white;
+        }
+
+        #aqua {
+            background-color: aquamarine;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #black {
+            background-color: black;
+        }
+
+        #color-switch {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="color-switch">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="blue" onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">About us</h1>
+    <img src="https://st2.depositphotos.com/3591429/10566/i/600/depositphotos_105666254-stock-photo-business-people-at-meeting-and.jpg"
+        alt="">
+    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ab veritatis temporibus non
+        quisquam culpa atque sunt quos nam obcaecati alias dolore magnam doloremque vitae enim fugiat sit, molestias eum
+        quaerat? Ratione soluta quo fuga sed cum nesciunt tempore suscipit provident, qui minima quas perferendis
+        deserunt repellendus eaque corporis! Ex nulla quam doloribus facilis, dolores nisi qui praesentium quaerat
+        nostrum ea consequatur sapiente deleniti fugiat obcaecati eum tempora, modi iusto incidunt vel temporibus minima
+        est consequuntur. Suscipit error aut blanditiis quibusdam voluptatum cupiditate hic temporibus ducimus doloribus
+        corporis a alias atque delectus minus consequuntur obcaecati reprehenderit, expedita, recusandae animi commodi?
+    </p>
+    <script>
+
+        function changeBG(color) {
+
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text");
+            if (color == "#000000") {
+                for (let elm of txt) {
+
+                    elm.style.color = "white";
+                }
+            } else {
+                for (let elm of txt) {
+
+                    elm.style.color = "black"
+                }
+            }
+
+        }
+
+    </script>
+
+
+    <script>
+
+    </script>>
+
+</body>
+
+</html>
